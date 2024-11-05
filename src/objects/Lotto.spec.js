@@ -30,7 +30,7 @@ describe('Lotto', () => {
     });
 
     describe('getRank', () => {
-      test('로또 번호가 0개에서 2개 사이 당첨 될 경우 undefined를 반환한다.', () => {
+      test('로또 번호가 0개에서 2개 사이 당첨 될 경우 null을 반환한다.', () => {
         expect(lotto.getRank([11, 12, 13, 14, 15, 16], 20)).toBeNull();
         expect(lotto.getRank([1, 11, 12, 13, 14, 15], 20)).toBeNull();
         expect(lotto.getRank([1, 2, 11, 12, 13, 14], 20)).toBeNull();
