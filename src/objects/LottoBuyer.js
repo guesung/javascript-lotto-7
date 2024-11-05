@@ -25,7 +25,7 @@ class LottoBuyer {
     const lottoPrizeMoney = this.#lottoResult.getTotalPrizeMoney();
 
     const rateOfReturn = parseFloat(
-      calculateRate(lottoPrizeMoney, this.#purchasePrice).toFixed(2),
+      calculateRate(lottoPrizeMoney, this.#purchasePrice).toFixed(1),
     );
 
     OutputController.printRateOfReturn(rateOfReturn);
