@@ -1,4 +1,4 @@
-import { ERROR_MESSAGE, LOTTO_RANK_MAP } from '../lib/constants.js';
+import { ERROR_MESSAGE, LOTTO, LOTTO_RANK_MAP } from '../lib/constants.js';
 import {
   getIsAllItemsUnique,
   getIsArrayLengthMatch,
@@ -28,7 +28,7 @@ class Lotto {
   }
 
   #validate() {
-    if (!getIsArrayLengthMatch(this.#numbers, 6))
+    if (!getIsArrayLengthMatch(this.#numbers, LOTTO.NUMBER_COUNT))
       throw new Error(ERROR_MESSAGE.NOT_SIX);
     if (!getIsAllItemsUnique(this.#numbers))
       throw new Error(ERROR_MESSAGE.NOT_UNIQUE);
