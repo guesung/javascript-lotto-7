@@ -95,7 +95,7 @@ class InputManager {
   }
 
   static #parsePurchasePrice(rawPurchasePrice) {
-    return rawPurchasePrice;
+    return Number(rawPurchasePrice);
   }
 
   static #parseWinningNumbers(rawWinningNumbers) {
